@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+  weather-sensor:
+    image: 'weather-sensor:latest'
+    container_name: 'weather sensor'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    network_mode: host
+    volumes:
+      - /data/weather_sensor: /data
+    restart: unless-stopped

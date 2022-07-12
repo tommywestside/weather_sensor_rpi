@@ -1,0 +1,7 @@
+config:
+  brokerURL: 'batman.local'
+  brokerPort: 1883
+  mqttUser: 'mqtt'
+  mqttPassword: 'mqtt'
+  mqttTopic: 'homeassistant/sensor/pool/weather'
+  clientName: 'Spiderman'

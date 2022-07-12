@@ -3,7 +3,7 @@ from random import randrange, uniform
 import time
 import adafruit_dht
 import yaml
-
+import board
 
 with open("/data/config.yml", "r") as stream:
     try:
@@ -11,14 +11,14 @@ with open("/data/config.yml", "r") as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
-mqttBrokerURL = config['brokerURL']  #'batman.local'
+mqttBrokerURL = config['brokerURL']  
 mqttBrokerPort = config['brokerPort']
-topic = config['mqttTopic'] #"homeassistant/sensor/pool/weather"
+topic = config['mqttTopic'] 
 mqttUser = config['mqttUser']
 mqttPassword = config['mqttPassword']
 clientName = config['clientName']
 
-print("BrokerURL: " + mqttBrokerURL + ", Port: " + mqttBrokerPort)
+print("BrokerURL: " + mqttBrokerURL + ", Port: " + str(mqttBrokerPort))
 print("MQTT Topic: " + topic)
 
 dhtDevice = adafruit_dht.DHT11(board.D4, use_pulseio=False)
@@ -55,6 +55,7 @@ def publish(client):
 				print(f"Send `{payload}` to topic `{topic}`")
 			else:
 				print(f"Faled to send message to topic `{topic}`")
+				print(result)
 			time.sleep(60)
 		else:
 			print("failed to fetch weather status")

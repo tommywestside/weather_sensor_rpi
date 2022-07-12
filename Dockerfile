@@ -4,9 +4,6 @@ RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
 RUN python -m pip install --upgrade pip
 RUN pip install RPi.GPIO
 
-RUN addgroup -g 997 gpio
-RUN adduser -D -G gpio user
-
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt

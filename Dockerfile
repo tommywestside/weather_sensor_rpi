@@ -1,4 +1,4 @@
-FROM python:3
+FROM acencini/rpi-python-serial-wiringpi
 
 WORKDIR /app
 

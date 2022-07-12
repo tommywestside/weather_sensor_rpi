@@ -8,6 +8,9 @@ services:
       dockerfile: Dockerfile
     privileged: true
     network_mode: host
+    devices:
+      - /dev/mem:/dev/mem
+      - /dev/ttyAMA0:/dev/ttyAMA0
     volumes:
       - /data/weather_sensor:/data
     restart: unless-stopped

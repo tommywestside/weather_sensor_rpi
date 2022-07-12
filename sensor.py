@@ -1,7 +1,6 @@
 import paho.mqtt.client as mqtt
 from random import randrange, uniform
 import time
-import board
 import adafruit_dht
 import yaml
 

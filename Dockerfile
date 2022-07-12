@@ -4,6 +4,7 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 RUN pip install paho-mqtt
+RUN pip install board
 RUN pip install Adafruit_DHT
 
 COPY sensor.py .

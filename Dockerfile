@@ -5,7 +5,7 @@ WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install paho-mqtt
 RUN pip install board
-RUN pip install Adafruit_DHT
+RUN pip install adafruit_dht
 
 COPY sensor.py .
 COPY sample-config.yml /data/config.yml

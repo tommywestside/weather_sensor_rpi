@@ -2,7 +2,7 @@ version: '3.7'
 services: 
   weather-sensor:
     image: 'weather-sensor:latest'
-    container_name: 'weather sensor'
+    container_name: 'weather-sensor'
     build:
       context: .
       dockerfile: Dockerfile

@@ -1,3 +1,4 @@
 paho-mqtt
 board
 adafruit-circuitpython-dht
+RPi

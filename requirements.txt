@@ -1,3 +1,3 @@
 paho-mqtt
 board
-Adafruit_Python_DHT
+adafruit-circuitpython-dht

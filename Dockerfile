@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
+RUN apt-get install python3-dev python3-rpi.gpio
 RUN pip3 install -r requirements.txt
 
 COPY sensor.py .

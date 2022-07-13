@@ -9,5 +9,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY sensor.py .
 
-CMD ["ls", "-al", "."] 
-#python sensor.py;
+CMD python sensor.py;

@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN apt-get install gcc libc-dev linux-headers
+RUN apt-get install gcc libc-dev
 RUN pip install RPi.GPIO
 
 WORKDIR /app

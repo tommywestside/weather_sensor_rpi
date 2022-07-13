@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
 RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
 RUN pip install RPi.GPIO

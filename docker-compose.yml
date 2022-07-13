@@ -13,4 +13,5 @@ services:
       - /dev/ttyAMA0:/dev/ttyAMA0
     volumes:
       - /data/weather_sensor:/data
+      - /app/weather_sensor:/app
     restart: unless-stopped

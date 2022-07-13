@@ -8,4 +8,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY sensor.py .
 
-CMD python /app/sensor.py
+CMD python /app/sensor.py;

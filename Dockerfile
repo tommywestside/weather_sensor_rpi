@@ -8,4 +8,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY sensor.py .
 
-ENTRYPOINT ["python3", "/app/sensor.py"]
+ENTRYPOINT ["python3 /app/sensor.py"]
